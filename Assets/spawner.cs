@@ -9,10 +9,6 @@ public class spawner : MonoBehaviour
     private double _spawnRate = 1;
     private float _timer = 0;
     private float _amountSpawned = 0;
-    void Start()
-    {
-
-    }
 
     void Update()
     {

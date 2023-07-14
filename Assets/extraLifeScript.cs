@@ -7,6 +7,7 @@ public class extraLifeScript : MonoBehaviour
     public Rigidbody2D Ball;
     public LogicScript Logic;
     private bool _started = false;
+
     void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.name.Equals("enemyBox(Clone)"))
@@ -16,13 +17,13 @@ public class extraLifeScript : MonoBehaviour
         }
 
     }
+
     void Start()
     {
         Logic = GameObject.FindGameObjectWithTag("Logic").GetComponent<LogicScript>();
 
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (_started)

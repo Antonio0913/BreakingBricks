@@ -9,6 +9,7 @@ public class ballMove : MonoBehaviour
     private float _start = 4;
     private float _timer = 0;
     private bool _started = false;
+
     void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.name.Equals("enemyBox(Clone)"))
