@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class spawner : MonoBehaviour
 {
+    public GameObject Spawner;
     public GameObject Block;
     private double _spawnRate = 1;
     private float _timer = 0;
@@ -22,7 +23,7 @@ public class spawner : MonoBehaviour
         }
         else if (_amountSpawned > 7)
         {
-
+            Destroy(Spawner);
         }
         else
         {
@@ -30,6 +31,5 @@ public class spawner : MonoBehaviour
             _amountSpawned++;
             _timer = 0;
         }
-
     }
 }
