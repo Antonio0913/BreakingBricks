@@ -4,53 +4,50 @@ using UnityEngine;
 
 public class ballMove : MonoBehaviour
 {
-    public Rigidbody2D ball;
-    public GameObject enemy;
-    public LogicScript logic;
-    private float start = 4;
-    private float timer = 0;
-    private bool started = false;
-    // Start is called before the first frame update
+    public Rigidbody2D Ball;
+    public LogicScript Logic;
+    private float _start = 4;
+    private float _timer = 0;
+    private bool _started = false;
     void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.name.Equals("enemyBox(Clone)"))
         {
             Destroy(other.gameObject);
-            logic.addScore();
+            Logic.addScore();
         }
-
     }
 
     void Start()
     {
-        logic = GameObject.FindGameObjectWithTag("Logic").GetComponent<LogicScript>();
+        Logic = GameObject.FindGameObjectWithTag("Logic").GetComponent<LogicScript>();
     }
 
     void Update()
     {
-        if (started)
+        if (_started)
         {
         }
-        else if (timer > start && Input.GetKeyDown(KeyCode.Space))
+        else if (_timer > _start && Input.GetKeyDown(KeyCode.Space))
         {
 
-            ball.AddForce(new Vector2(0, 10), ForceMode2D.Impulse);
-            started = true;
+            Ball.AddForce(new Vector2(0, 10), ForceMode2D.Impulse);
+            _started = true;
         }
         else
         {
-            timer = timer + Time.deltaTime;
+            _timer = _timer + Time.deltaTime;
             if (Input.GetKey(KeyCode.D))
             {
-                ball.velocity = new Vector2(15, 0);
+                Ball.velocity = new Vector2(15, 0);
             }
             else if (Input.GetKey(KeyCode.A))
             {
-                ball.velocity = new Vector2(-15, 0);
+                Ball.velocity = new Vector2(-15, 0);
             }
             else
             {
-                ball.velocity = new Vector2(0, 0);
+                Ball.velocity = new Vector2(0, 0);
             }
         }
 

@@ -8,12 +8,12 @@ public class LogicScript : MonoBehaviour
 {
     public Text Scoretext;
     public GameObject GameOverScreen;
-    public int playerScore;
+    public int PlayerScore;
 
     public void addScore()
     {
-        playerScore++;
-        Scoretext.text = playerScore.ToString();
+        PlayerScore++;
+        Scoretext.text = PlayerScore.ToString();
     }
     public void restart()
     {

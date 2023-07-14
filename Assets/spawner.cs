@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class spawner : MonoBehaviour
 {
-    public GameObject block;
-    public double spawnRate = 1;
-    private float timer = 0;
-    private float amountSpawned = 0;
+    public GameObject Block;
+    private double _spawnRate = 1;
+    private float _timer = 0;
+    private float _amountSpawned = 0;
     void Start()
     {
 
@@ -16,19 +16,19 @@ public class spawner : MonoBehaviour
     void Update()
     {
         transform.position = transform.position + (Vector3.left * 5 * Time.deltaTime);
-        if (timer < spawnRate)
+        if (_timer < _spawnRate)
         {
-            timer = timer + Time.deltaTime;
+            _timer = _timer + Time.deltaTime;
         }
-        else if (amountSpawned > 7)
+        else if (_amountSpawned > 7)
         {
 
         }
         else
         {
-            Instantiate(block, transform.position, transform.rotation);
-            amountSpawned++;
-            timer = 0;
+            Instantiate(Block, transform.position, transform.rotation);
+            _amountSpawned++;
+            _timer = 0;
         }
 
     }
