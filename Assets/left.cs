@@ -7,7 +7,7 @@ public class left : MonoBehaviour
     public Rigidbody2D Bar;
     void Start()
     {
-
+        //afewoaewojiewfojie
     }
 
     void Update()

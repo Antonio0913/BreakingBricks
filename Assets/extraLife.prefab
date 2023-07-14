@@ -133,6 +133,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6931d08d390c4ba47941e2807e3295c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ball: {fileID: 6851991593139803950}
-  enemy: {fileID: 8208747370561751708, guid: acf2fa9717d776640bd16ec0d6835beb, type: 3}
-  logic: {fileID: 0}
+  Ball: {fileID: 6851991593139803950}
+  Logic: {fileID: 0}
